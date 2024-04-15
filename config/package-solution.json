@@ -1,0 +1,48 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "USFF Custom Footer",
+    //"id": "f78eb0a8-d7b9-453c-981c-ca2f174a85c5",
+    "id": "e87de411-f69d-4549-ad4c-d74f91daed57",
+    "version": "1.0.4.4",
+    "iconPath": "icon/USFF_Logo_AppIcon_96x96.png",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "Mike Landino, USFF N611",
+      "websiteUrl": "https://flankspeed.sharepoint-mil.us/sites/USFF",
+      "privacyUrl": "https://flankspeed.sharepoint-mil.us/sites/USFF",
+      "termsOfUseUrl": "https://flankspeed.sharepoint-mil.us/sites/USFF",
+      "mpnId": "Undefined-1.14.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "Custom SPO (Flank Speed) Footer"
+      },
+      "longDescription": {
+        "default": "Custom footer used for sites and site collections on SPO (Flank Speed).  Can be used by other Hubs/tenants as all info is data-driven. All links data driven from a list on the Hub site and the command name/logo is pulled from the connected hub.  If not connected to a hub, nothing will display.  Developer: Mike Landino, USFF N611"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "Application Extension for Custom Footer Placeholder",
+        "description": "Deploys a custom action with ClientSideComponentId association",
+        "id": "56e56159-835d-49fa-bac1-6b076c66bc71",
+        "version": "1.0.4.4",
+        "assets": {
+          "elementManifests": [
+            "elements.xml",
+            "ClientSideInstance.xml"
+          ]
+        }
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/usff-footer.sppkg"
+  }
+}

@@ -1,0 +1,216 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+
+.CustomFooterContainer{
+
+  /************************************
+            Sticky FOOTER
+  *************************************/
+  .CustomFooterSticky{
+    width: 100%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    background-color: $ms-color-neutralLight;
+    color: $ms-color-neutralPrimary;
+    border-top: 2px solid;
+    border-top-color: $ms-color-neutralQuaternary;
+
+    a, a:visited  {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        color: $ms-color-themePrimary;
+      }
+    }
+
+    .toggleControl {
+      width: 1em;
+      margin-left: 1.5em;
+
+      .toggleButton {
+        background-color: transparent;
+        border: 0;
+        color: inherit;
+        padding: 0;
+        min-width: 0;
+
+        &:hover{
+          color: $ms-color-themePrimary;
+        }
+
+        div {
+          width: 1em;
+          height: 40px;
+          line-height: 40px;
+        }
+      }
+
+    }
+
+    .commandSticky{
+      flex: 33.3%;
+      padding-left: 10px;
+      display: flex;
+      align-items: center;
+    
+      .commandLogoSticky{
+        padding-right:5px;
+        display: flex;
+        cursor: pointer;
+
+        img {
+          max-height: 44px;
+        }
+
+      }
+
+      .commandTitle{
+        cursor: pointer;
+      }
+      
+    }
+    
+    .stickyLinks{
+      flex: 33.3%;
+      display:flex;
+      justify-content: center;
+
+      div{
+        padding: 0 10px;
+        text-align: center;
+
+        &:not(:first-child){
+          //border-left: 1px solid $ms-color-themeDarker;
+          border-left: 1px solid $ms-color-neutralPrimary;
+        }
+
+      }
+
+    }
+
+    .support{
+      flex: 33.3%;
+      padding-right: 10px;
+      
+        div{
+          display: flex;
+          float: right;
+          cursor: pointer;
+    
+          &:hover {
+            //color: $ms-color-themePrimary;
+            color: $ms-color-themeDarker;
+          }
+      
+          &:hover i, i {
+            //color: $ms-color-themePrimary;
+            color: $ms-color-themeDarker;
+          }
+
+          i{
+            font-size: 20px;
+            padding-right: 5px;
+          }
+
+      }
+
+    }
+    
+  }
+
+
+  /************************************
+            FOOTER POPUP
+  *************************************/
+  .CustomFooterPopup {
+    //background-color: $ms-color-neutralSecondary;
+    background-color: $ms-color-themeDarker;
+    //color: $ms-color-neutralLighter;
+    color: $ms-color-themeLighterAlt;
+    font-size: 12px;
+    clear: both;
+    box-sizing:	revert; /*overwrite bootstrap.css*/
+    transition-property: height;
+    transition-duration: 2.5s;
+    transition-timing-function: ease;
+    transition-delay: 0.5s;
+    overflow: hidden;
+    height: 0;
+
+    a, a:visited  {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        //color: $ms-color-themePrimary
+        color: $ms-color-themeLight;
+      }
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 0.2em 0;
+    }
+
+    &.visible {
+      height: auto;
+      min-height:235px;
+    }
+
+    &.hidden {
+      height: 0;
+    }
+
+    .linkHeader{
+      // padding: 5px 0;
+      font-weight: bold;
+      font-size: larger;
+    }
+
+    .CustomFooterPopupTop {
+      padding-top:20px;
+      padding-bottom: 20px;
+      display: grid;
+      grid-template-columns: 75% 25%;
+
+        .linksGroupContainer{
+          grid-column: 1;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+
+          .linkGroup {
+            padding-left: 40%;
+          }
+
+        }
+
+        .commandGroupContainer{
+          grid-column: 2;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .commandGroup{
+            text-align: center;
+      
+            .commandLogo{
+              width: 100px;
+            }
+          }
+
+        }
+
+    }
+  
+    .CustomFooterPopupBottom{
+      padding: 10px 0;
+    }
+  }
+
+}

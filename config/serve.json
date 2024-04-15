@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://1g518n.sharepoint.com/sites/Mark8ProjectTeam/SitePages/Home.aspx",
+      "customActions": {
+        "0371a27f-fca0-46dc-9142-6e8b92251c6e": {
+          "location": "ClientSideExtension.ApplicationCustomizer"
+        }
+      }
+    },
+    "customFooter": {
+      "pageUrl": "https://1g518n.sharepoint.com/sites/Mark8ProjectTeam/SitePages/Home.aspx",
+      "customActions": {
+        "0371a27f-fca0-46dc-9142-6e8b92251c6e": {
+          "location": "ClientSideExtension.ApplicationCustomizer"
+        }
+      }
+    }
+  }
+}
